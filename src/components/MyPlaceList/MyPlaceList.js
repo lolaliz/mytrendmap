@@ -10,6 +10,7 @@ const MyPlaceList = props => {
         onItemPressed={() => props.onItemDeleted(i)} />
       ));
     return (
+       
         <FlatList style={styles.listContainer}
         data = {props.places}
         renderItem={(info) => (
@@ -18,12 +19,14 @@ const MyPlaceList = props => {
             placeImage= {info.item.image}
             onItemPressed= {()=> props.onItemSelected(info.item.key)}
             />
-        )} />
+        )} /> 
     )
 };
 //use this to change styling
 const styles = StyleSheet.create({
+   
     listContainer: {
+      backgroundColor: "black",
       width: "100%"
     }
 });
