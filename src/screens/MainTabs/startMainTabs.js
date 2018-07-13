@@ -6,6 +6,7 @@ const startTabs = () => {
     Promise.all([
         Icon.getImageSource( Platform.OS === 'android' ? "md-map" : "ios-map", 30),
         Icon.getImageSource(Platform.OS === 'android'  ?  "md-share-alt" : "ios-share", 30),
+        Icon.getImageSource(Platform.OS === 'android'  ?  "md-navigate" : "ios-navigate", 30),
         Icon.getImageSource(Platform.OS === 'android'  ? "md-menu" : "ios-menu", 30)
     ]).then(sources => {
         Navigation.startTabBasedApp({
@@ -18,7 +19,7 @@ const startTabs = () => {
                    navigatorButtons: {
                     leftButtons: [
                         {
-                            icon: sources[2],
+                            icon: sources[3],
                             title: "Menu",
                             id: "sideDrawerToggle"
                         }
@@ -33,7 +34,22 @@ const startTabs = () => {
                     navigatorButtons: {
                         leftButtons: [
                             {
-                                icon: sources[2],
+                                icon: sources[3],
+                                title: "Menu",
+                                id: "sideDrawerToggle"
+                            }
+                        ]
+                    }
+                 },
+                 {
+                    screen: "fomo-map.MainMapScreen",
+                    label: "Main Map",
+                    title: "Main Map",
+                    icon: sources[2],
+                    navigatorButtons: {
+                        leftButtons: [
+                            {
+                                icon: sources[3],
                                 title: "Menu",
                                 id: "sideDrawerToggle"
                             }

@@ -7,6 +7,7 @@ import FindPlaceScreen from "./src/screens/FindPlace/FindPlace";
 import PlaceDetailScreen from "./src/screens/MyPlaceDetail/MyPlaceDetail";
 import configureStore from './src/store/configureStore';
 import SideDrawer from "./src/screens/SideDrawer/SideDrawer";
+import MainMapScreen from "./src/screens/MainMap/MainMap";
 
 const store = configureStore();
 
@@ -19,6 +20,8 @@ Navigation.registerComponent("fomo-map.FindPlaceScreen",
 () => FindPlaceScreen, store, Provider);
 Navigation.registerComponent("fomo-map.PlaceDetailScreen",
 () => PlaceDetailScreen, store, Provider);
+Navigation.registerComponent("fomo-map.MainMapScreen",
+() => MainMapScreen); //may need to add store, Provider later
 Navigation.registerComponent( "fomo-map.SideDrawer", 
 () => SideDrawer);
 
